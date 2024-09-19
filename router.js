@@ -1,8 +1,7 @@
 import{Router} from "express";
-import* as rh from "./requestHandler.js";
+import {Home} from "./requestHandler.js";
 const router =Router();
 
-router.route("/").get(rh.Home);
-router.route("/get").get(rh.getData);
-
+router.route("/adddonor").post(Home);
 export default router;
+

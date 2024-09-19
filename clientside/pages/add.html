@@ -68,7 +68,7 @@
 <body>
     <div class="container">
         <h1>Donor Registration</h1>
-        <form action="index.html" method="post">
+        <form  method="post" id="frm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -84,8 +84,8 @@
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label for="blood-group">Blood Group:</label>
-            <select id="blood-group" name="blood-group" required>
+            <label for="blood_group">Blood Group:</label>
+            <select id="blood_group" name="blood_group" required>
                 <option value="">Select Blood Group</option>
                 <option value="A+">A+</option>
                 <option value="A-">A-</option>
@@ -97,17 +97,12 @@
                 <option value="O-">O-</option>
             </select>
 
-            <label for="eligible">Eligible to Donate:</label>
-            <select id="eligible" name="eligible" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-
             <div class="buttons">
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
             </div>
         </form>
     </div>
+    <script src="../js/add.js"></script>
 </body>
 </html>
