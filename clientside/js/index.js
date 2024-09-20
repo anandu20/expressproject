@@ -17,8 +17,8 @@ async function getDonors(){
 
           
                     <td class="actions">
-                        <button>Edit</button>
-                        <button>Delete</button>
+                    <a href="../pages/edit.html"><button>Edit</button></a>
+                    <button>Delete</button>
                     </td>
                 </tr>
              
