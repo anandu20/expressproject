@@ -29,6 +29,14 @@
     justify-content: space-between;
     align-items: center;
 }
+.filter{
+    width: 60px;
+    height: 35px;
+    text-align: left;
+    border-radius: 4px;
+    border: none;
+
+}
 .right ul{
     list-style-type: none;
     height: 35%;

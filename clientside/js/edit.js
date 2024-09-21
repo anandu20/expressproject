@@ -1,7 +1,8 @@
+const url=window.location.href;
+const urlParams=new URLSearchParams(url.split("?")[1]);
+const id=urlParams.get("id");
 async function getDonor() {
-    const url=window.location.href;
-    const urlParams=new URLSearchParams(url.split("?")[1]);
-    const id=urlParams.get("id");
+   
     const res=await fetch(`http://localhost:3001/api/getdonor/${id}`)
     const donor=await res.json()
     console.log(donor);
@@ -51,9 +52,18 @@ document.getElementById("frm").addEventListener(`submit`,async(e)=>{
     const phone=document.getElementById("phone").value;
     const blood_group=document.getElementById("blood_group").value;
     console.log(name,age,dob,place,phone,blood_group);
+    const res=await fetch(`http://localhost:3001/api/editdonor/${id}`,{
+     method:"PUT",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({name,age,dob,place,phone,blood_group})
+
+    })
     
 
-
+if(res.status==201){
+    alert("updated successfully")
+    window.location.href="../index.html"
+}
 
     
 })
