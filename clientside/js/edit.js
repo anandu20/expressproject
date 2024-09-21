@@ -15,10 +15,10 @@ async function getDonor() {
             <input type="date" id="dob" name="dob" value="${donor.dob}">
 
             <label for="place">Place:</label>
-            <input type="text" id="place" name="place" >
+            <input type="text" id="place" name="place" value="${donor.place} ">
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" >
+            <input type="tel" id="phone" name="phone"  value="${donor.phone}">
 
             <label for="blood_group">Blood Group:</label>
             <select id="blood_group" name="blood_group" >
